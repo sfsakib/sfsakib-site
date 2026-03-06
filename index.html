@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SF Sakib - WordPress Developer</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#0b0f19;
+color:#fff
+}
+
+.container{
+width:1100px;
+max-width:95%;
+margin:auto
+}
+
+/* HEADER */
+
+header{
+padding:20px 0;
+border-bottom:1px solid #222
+}
+
+nav{
+align-items:center
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#ff014f
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px
+}
+
+nav a{
+text-decoration:none;
+color:#fff
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+gap:60px;
+padding:80px 0;
+flex-wrap:wrap
+}
+
+.content{
+max-width:550px
+}
+
+h1{
+font-size:14px;
+letter-spacing:2px;
+color:#aaa
+}
+
+h2{
+font-size:44px;
+margin:6px 0
+}
+
+.highlight{
+color:#ff014f
+}
+
+.cursor{
+display:inline-block;
+width:3px;
+height:32px;
+background:#ff014f;
+margin-left:5px;
+animation:blink .8s infinite
+}
+
+@keyframes blink{
+50%{opacity:0}
+}
+
+p{
+margin-top:20px;
+color:#ccc;
+line-height:1.7
+}
+
+/* SOCIAL */
+
+.social-section{
+display:flex;
+gap:40px;
+margin-top:30px;
+flex-wrap:wrap
+}
+
+.social-icons{
+display:flex;
+gap:15px;
+margin-top:10px
+}
+
+.social-icons a{
+width:45px;
+height:45px;
+background:#121826;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:8px;
+transition:.3s
+}
+
+.social-icons a:hover{
+background:#ff014f;
+transform:translateY(-5px)
+}
+
+/* IMAGE */
+
+.image-box img{
+max-width:420px;
+width:100%;
+border-radius:15px;
+box-shadow:0 20px 40px rgba(0,0,0,.5)
+}
+
+/* SERVICES */
+
+.section{
+padding:70px 0
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px
+}
+
+.card{
+background:#121826;
+padding:25px;
+border-radius:10px;
+border:1px solid #1f2635
+}
+
+/* PRICING */
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px
+}
+
+.price{
+background:#121826;
+padding:30px;
+border-radius:10px;
+text-align:center;
+border:1px solid #1f2635
+}
+
+.price h2{
+color:#ff014f
+}
+
+.btn{
+display:inline-block;
+padding:12px 24px;
+background:#ff014f;
+color:#fff;
+border-radius:6px;
+text-decoration:none;
+margin-top:15px
+}
+
+.hire-section{
+padding:100px 20px;
+display:flex;
+justify-content:center;
+}
+
+.hire-box{
+width:750px;
+background:#0b0f19;
+padding:50px;
+border-radius:20px;
+border:1px solid rgba(255,140,0,0.3);
+text-align:center;
+}
+
+.badge{
+display:inline-block;
+padding:6px 14px;
+border:1px solid #ff8c00;
+border-radius:20px;
+color:#ff8c00;
+font-size:12px;
+margin-bottom:15px;
+}
+
+.hire-box h2 span{
+color:#ff8c00;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:30px;
+}
+
+.input-box{
+text-align:left;
+}
+
+.input-box label{
+font-size:13px;
+color:#ccc;
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+margin-top:6px;
+background:#0f1424;
+border:1px solid rgba(255,140,0,0.4);
+border-radius:6px;
+color:#fff;
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+.hire-btn{
+margin-top:25px;
+width:100%;
+padding:14px;
+border:none;
+border-radius:30px;
+background:linear-gradient(90deg,#ff7a00,#ffb300);
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+
+/* CONTACT */
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border:none;
+border-radius:5px
+}
+
+/* FOOTER */
+.footer{
+
+background:#070b16;
+color:#ccc;
+padding:60px 0 20px;
+border-top:1px solid #1a1f2b;
+
+}
+
+.footer-container{
+
+width:1100px;
+max-width:95%;
+margin:auto;
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1.5fr;
+gap:40px;
+
+}
+
+.logo{
+
+color:#ff9a00;
+font-size:26px;
+margin-bottom:15px;
+
+}
+
+.footer-about p{
+
+line-height:1.7;
+
+}
+
+.footer-links h3,
+.footer-contact h3{
+
+color:#fff;
+margin-bottom:15px;
+position:relative;
+
+}
+
+.footer-links h3::after,
+.footer-contact h3::after{
+
+content:'';
+display:block;
+width:40px;
+height:3px;
+background:#ff9a00;
+margin-top:6px;
+
+}
+
+.footer-links ul{
+
+list-style:none;
+padding:0;
+
+}
+
+.footer-links li{
+
+margin-bottom:10px;
+
+}
+
+.footer-links a{
+
+color:#ccc;
+text-decoration:none;
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+color:#ff9a00;
+
+}
+
+.footer-contact p{
+
+margin-bottom:10px;
+
+}
+
+.social-icons{
+
+display:flex;
+gap:12px;
+margin-top:20px;
+
+}
+
+.social-icons a{
+
+width:40px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#111827;
+border-radius:8px;
+color:#fff;
+transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+background:#ff9a00;
+
+}
+
+.testimonials{
+padding:100px 20px;
+text-align:center;
+}
+
+.slider{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+margin-top:40px;
+}
+
+.testimonials{
+padding:100px 20px;
+text-align:center;
+background:#0b0f19;
+}
+
+.badge{
+display:inline-block;
+padding:6px 14px;
+border:1px solid #ff8c00;
+border-radius:20px;
+color:#ff8c00;
+font-size:12px;
+letter-spacing:1px;
+margin-bottom:10px;
+}
+
+.section-title h2 span{
+color:#ff8c00;
+}
+
+.testimonial-slider{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+margin-top:40px;
+}
+
+.testimonial-wrapper{
+width:650px;
+overflow:hidden;
+display:flex;
+}
+
+.testimonial-card{
+min-width:650px;
+background:#070b16;
+border:1px solid rgba(255,140,0,0.3);
+border-radius:15px;
+padding:40px;
+text-align:left;
+transition:0.5s;
+}
+
+.quote{
+font-size:40px;
+color:#ff8c00;
+margin-bottom:10px;
+}
+
+.client{
+display:flex;
+align-items:center;
+gap:15px;
+margin-top:20px;
+}
+
+.client img{
+width:55px;
+height:55px;
+border-radius:50%;
+}
+
+.client h4{
+margin:0;
+}
+
+.client span{
+font-size:13px;
+color:#aaa;
+}
+
+.stars{
+color:#ffb400;
+margin-top:4px;
+}
+
+.arrow{
+background:#ff8c00;
+border:none;
+width:40px;
+height:40px;
+border-radius:50%;
+color:#fff;
+cursor:pointer;
+}
+
+.dots{
+margin-top:20px;
+}
+
+.dot{
+display:inline-block;
+width:8px;
+height:8px;
+background:#333;
+border-radius:50%;
+margin:0 4px;
+}
+
+.dot.active{
+background:#ff8c00;
+}
+
+/* CTA SECTION */
+
+.cta-section{
+padding:80px 0;
+display:flex;
+justify-content:center;
+}
+
+.cta-box{
+width:1100px;
+max-width:95%;
+background:linear-gradient(90deg,#3b1f00,#1b1406);
+padding:60px 40px;
+border-radius:20px;
+text-align:center;
+border:1px solid #ff8c00;
+}
+
+.cta-badge{
+display:inline-block;
+background:#1a1206;
+color:#ff8c00;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+letter-spacing:1px;
+margin-bottom:20px;
+}
+
+.cta-box h2{
+font-size:36px;
+margin:10px 0;
+}
+
+.cta-box h2 span{
+color:#ff9a00;
+}
+
+.cta-box p{
+color:#bbb;
+margin-bottom:30px;
+}
+
+.cta-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn-quote{
+background:linear-gradient(90deg,#ff7a00,#ffb300);
+padding:14px 26px;
+border-radius:30px;
+text-decoration:none;
+color:#fff;
+font-weight:bold;
+}
+
+.btn-whatsapp{
+background:#25D366;
+padding:14px 26px;
+border-radius:30px;
+text-decoration:none;
+color:#fff;
+font-weight:bold;
+}
+
+.btn-phone{
+border:1px solid #ff8c00;
+padding:14px 26px;
+border-radius:30px;
+text-decoration:none;
+color:#fff;
+}
+
+.footer-bottom{
+
+margin-top:40px;
+border-top:1px solid #1a1f2b;
+padding-top:20px;
+text-align:center;
+width:100%;
+
+}
+
+.pricing-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.pricing-title span{
+color:#ff8c00;
+}
+
+.pricing-cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.price-card{
+background:#070b16;
+border:1px solid #1f2635;
+border-radius:15px;
+padding:35px;
+text-align:center;
+position:relative;
+transition:.3s;
+}
+
+.price-card:hover{
+transform:translateY(-8px);
+border-color:#ff8c00;
+}
+
+.icon{
+font-size:28px;
+margin-bottom:10px;
+color:#ff8c00;
+}
+
+.price-card h2{
+color:#ff8c00;
+margin:10px 0;
+}
+
+.price-card span{
+font-size:14px;
+color:#aaa;
+}
+
+.price-card ul{
+list-style:none;
+padding:0;
+margin:20px 0;
+text-align:left;
+}
+
+.price-card li{
+margin:10px 0;
+font-size:14px;
+}
+
+.price-card li i{
+color:#ff8c00;
+margin-right:8px;
+}
+
+.disabled{
+color:#666;
+}
+
+.disabled i{
+color:#444;
+}
+
+.popular{
+border:2px solid #ff8c00;
+}
+
+.popular-badge{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#ff8c00;
+color:#fff;
+padding:4px 12px;
+border-radius:20px;
+font-size:12px;
+}
+
+.btn-whatsapp,
+.btn-email,
+.btn-fiverr{
+display:block;
+margin-top:10px;
+padding:12px;
+border-radius:25px;
+text-decoration:none;
+font-size:14px;
+}
+
+.btn-whatsapp{
+background:#25D366;
+color:#fff;
+}
+
+.btn-email{
+border:1px solid #ff8c00;
+color:#fff;
+}
+
+.btn-fiverr{
+background:#00b22d;
+color:#fff;
+}
+
+@media(max-width:900px){
+
+.pricing-cards{
+grid-template-columns:1fr;
+}
+
+}
+/* PORTFOLIO */
+
+.portfolio-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.portfolio-title span{
+color:#ff8c00;
+}
+
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.portfolio-card{
+background:#070b16;
+border:1px solid #1f2635;
+border-radius:12px;
+overflow:hidden;
+transition:.3s;
+}
+
+.portfolio-card:hover{
+transform:translateY(-8px);
+border-color:#ff8c00;
+}
+
+.portfolio-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.portfolio-content{
+padding:20px;
+}
+
+.portfolio-content h5{
+font-size:11px;
+color:#aaa;
+letter-spacing:1px;
+}
+
+.portfolio-content h3{
+font-size:18px;
+margin:8px 0;
+}
+
+.tags{
+margin-top:10px;
+}
+
+.tags span{
+border:1px solid #ff8c00;
+color:#ff8c00;
+padding:4px 10px;
+font-size:12px;
+border-radius:20px;
+margin-right:5px;
+}
+
+.view-btn{
+text-align:center;
+margin-top:40px;
+}
+
+@media(max-width:900px){
+
+.portfolio-grid{
+grid-template-columns:1fr;
+}
+
+}
+/* ABOUT SECTION */
+
+.about-section{
+padding:100px 0;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-image{
+position:relative;
+text-align:center;
+}
+
+.about-image img{
+width:100%;
+max-width:350px;
+border-radius:15px;
+box-shadow:0 0 40px rgba(255,140,0,0.4);
+}
+
+.experience-box{
+position:absolute;
+bottom:-60px;
+left:80%;
+transform:translateX(-50%);
+background:linear-gradient(90deg,#ff7a00,#ffb300);
+padding:15px 25px;
+border-radius:12px;
+color:#fff;
+text-align:center;
+}
+
+.experience-box h3{
+margin:0;
+font-size:24px;
+}
+
+.about-content span{
+color:#ff8c00;
+}
+
+.about-skills{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin:25px 0;
+}
+
+.skill{
+background:#121826;
+border:1px solid #1f2635;
+padding:12px;
+border-radius:8px;
+font-size:14px;
+}
+
+.about-buttons{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+@media(max-width:900px){
+
+.about-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.about-skills{
+grid-template-columns:1fr;
+}
+
+.about-buttons{
+justify-content:center;
+}
+
+}
+
+/* SERVICES SECTION */
+
+.services-section{
+padding:100px 0;
+text-align:center;
+}
+
+.services-section h2 span{
+color:#ff8c00;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:50px;
+}
+
+.service-card{
+background:#070b16;
+border:1px solid rgba(255,140,0,0.3);
+padding:30px;
+border-radius:15px;
+text-align:left;
+transition:.3s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+border-color:#ff8c00;
+}
+
+.service-icon{
+width:45px;
+height:45px;
+background:#1a1206;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+color:#ff8c00;
+font-size:20px;
+margin-bottom:15px;
+}
+
+.service-card h3{
+margin:10px 0;
+}
+
+.service-card p{
+font-size:14px;
+color:#bbb;
+}
+
+.service-card ul{
+list-style:none;
+padding:0;
+margin:15px 0;
+}
+
+.service-card li{
+margin:8px 0;
+font-size:14px;
+}
+
+.learn-btn{
+display:inline-block;
+margin-top:10px;
+color:#ff8c00;
+text-decoration:none;
+font-weight:bold;
+}
+
+.view-services{
+margin-top:40px;
+}
+
+@media(max-width:900px){
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+/* SKILLS SECTION */
+
+.skills-section{
+padding:100px 0;
+background:#0b0f19;
+text-align:center;
+}
+
+.skills-title span{
+color:#ff8c00;
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+.skill-card{
+background:#070b16;
+border:1px solid #1f2635;
+padding:20px;
+border-radius:10px;
+text-align:left;
+}
+
+.skill-card p{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+font-size:14px;
+}
+
+.bar{
+width:100%;
+height:6px;
+background:#1f2635;
+border-radius:10px;
+overflow:hidden;
+}
+
+.bar div{
+height:100%;
+background:linear-gradient(90deg,#ff7a00,#ffb300);
+}
+
+/* STATS */
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-top:60px;
+}
+
+.stat-card{
+background:#070b16;
+border:1px solid #1f2635;
+padding:30px;
+border-radius:12px;
+}
+
+.stat-card h2{
+color:#ff8c00;
+font-size:32px;
+margin-bottom:8px;
+}
+
+.stat-card p{
+color:#aaa;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.skills-grid{
+grid-template-columns:1fr;
+}
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.footer-container{
+
+grid-template-columns:1fr;
+gap:30px;
+
+}
+.footer-bottom{
+display:flex;
+justify-content:center;
+align-items:center;
+width:100%;
+margin-top:30px;
+padding-top:20px;
+border-top:1px solid #1f2635;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center
+}
+
+.grid{
+grid-template-columns:1fr
+}
+
+.pricing{
+grid-template-columns:1fr
+}
+
+.social-section{
+justify-content:center
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<section class="hero container">
+
+<div class="content">
+
+<h1>WELCOME TO MY WORLD</h1>
+
+<h2>I’m <span class="highlight">SF Sakib</span></h2>
+
+<h2><span id="changingText"></span><span class="cursor"></span></h2>
+
+<p>
+I am a Certified WordPress Expert specializing in e-commerce development 
+and modern website solutions for businesses.
+</p>
+
+
+<div class="social-section">
+
+<div>
+
+<h3>Find With Me</h3>
+
+<div class="social-icons">
+<a href="#"><i class="fab fa-behance"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+
+</div>
+
+
+<div>
+
+<h3>Contact With Me</h3>
+
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-messenger"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+<a href="#"><i class="fas fa-paper-plane"></i></a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="image-box">
+
+<img src="https://sfsakib.22web.org/wp-content/uploads/2026/01/hero.png">
+
+</div>
+
+</section>
+
+
+<!-- SKILLS SECTION -->
+
+<section class="skills-section">
+
+<div class="container">
+
+<div class="skills-title">
+<span class="badge">TECH STACK</span>
+<h2>Skills & <span>Expertise</span></h2>
+<p>Mastered technologies that power modern, high-performance web applications.</p>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<p>🛡 WordPress / Elementor <span>99%</span></p>
+<div class="bar"><div style="width:99%"></div></div>
+</div>
+
+<div class="skill-card">
+<p>🛡 E-Commerce Store <span>98%</span></p>
+<div class="bar"><div style="width:88%"></div></div>
+</div>
+
+<div class="skill-card">
+<p>🛡 Front End Web Developer <span>92%</span></p>
+<div class="bar"><div style="width:92%"></div></div>
+</div>
+
+<div class="skill-card">
+<p>HTML / CSS / JS <span>99%</span></p>
+<div class="bar"><div style="width:99%"></div></div>
+</div>
+
+<div class="skill-card">
+<p>🛡 WooCommerce Management <span>98%</span></p>
+<div class="bar"><div style="width:98%"></div></div>
+</div>
+
+<div class="skill-card">
+<p>SEO & Performance <span>85%</span></p>
+<div class="bar"><div style="width:85%"></div></div>
+</div>
+
+</div>
+
+<!-- STATS -->
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h2>80+</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat-card">
+<h2>20+</h2>
+<p>Happy Clients</p>
+</div>
+
+<div class="stat-card">
+<h2>8+</h2>
+<p>Countries Served</p>
+</div>
+
+<div class="stat-card">
+<h2>5 ★</h2>
+<p>Average Rating</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<section class="services-section container">
+
+<div class="section-title">
+
+<span class="badge">WHAT I OFFER</span>
+
+<h2>My <span>Services</span></h2>
+
+<p>
+From simple landing pages to complex web applications — premium digital solutions.
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<!-- SERVICE 1 -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-brands fa-wordpress"></i>
+</div>
+
+<h3>WordPress Development</h3>
+
+<p>WordPress websites with premium themes, Elementor, and plugins.</p>
+
+<ul>
+
+<li>✔ Custom Theme Setup</li>
+<li>✔ Elementor Free Expert</li>
+<li>✔ Plugin Configuration</li>
+<li>✔ Mobile Responsive</li>
+
+</ul>
+
+<a href="#" class="learn-btn">Learn More →</a>
+
+</div>
+
+
+<!-- SERVICE 2 -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-cart-shopping"></i>
+</div>
+
+<h3>E-commerce Website</h3>
+
+<p>Complete online store with payment gateways and inventory management.</p>
+
+<ul>
+
+<li>✔ WooCommerce Setup</li>
+<li>✔ Payment Gateway</li>
+<li>✔ Order Management</li>
+<li>✔ Secure Checkout</li>
+
+</ul>
+
+<a href="#" class="learn-btn">Learn More →</a>
+
+</div>
+
+
+<!-- SERVICE 3 -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-gear"></i>
+</div>
+
+<h3>Custom Website</h3>
+
+<p>Tailor-made website built with admin panels to business tools.</p>
+
+<ul>
+
+<li>✔ Custom Dashboard</li>
+<li>✔ Database Design</li>
+<li>✔ API Integration</li>
+<li>✔ Secure Auth</li>
+
+</ul>
+
+<a href="#" class="learn-btn">Learn More →</a>
+
+</div>
+
+
+<!-- SERVICE 4 -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-fire"></i>
+</div>
+
+<h3>Dropshipping Store</h3>
+
+<p>We create professional dropshipping stores that are modern, fast, and optimized to generate sales for your online business.</p>
+
+<ul>
+
+<li>✔ Responsive Design</li>
+<li>✔ Modern & Professional UI</li>
+<li>✔ Easy Product Management</li>
+<li>✔ Secure Payments & Order Tracking</li>
+
+</ul>
+
+<a href="#" class="learn-btn">Learn More →</a>
+
+</div>
+
+
+<!-- SERVICE 5 -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+
+<h3>SEO & Speed Optimization</h3>
+
+<p>Boost PageSpeed score and Google rankings.</p>
+
+<ul>
+
+<li>✔ PageSpeed 90+</li>
+<li>✔ Image Compression</li>
+<li>✔ Cache Setup</li>
+<li>✔ Core Web Vitals</li>
+
+</ul>
+
+<a href="#" class="learn-btn">Learn More →</a>
+
+</div>
+
+
+<!-- SERVICE 6 -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-shield"></i>
+</div>
+
+<h3>Bug Fix & Maintenance</h3>
+
+<p>Fix errors, remove malware, keep your site secure.</p>
+
+<ul>
+
+<li>✔ Malware Removal</li>
+<li>✔ WP Error Fix</li>
+<li>✔ Security Hardening</li>
+<li>✔ Regular Backup</li>
+
+</ul>
+
+<a href="#" class="learn-btn">Learn More →</a>
+
+</div>
+
+</div>
+
+<div class="view-services">
+
+<a href="#" class="btn">View All Services</a>
+
+</div>
+
+</section>
+
+<section class="about-section container">
+
+<div class="about-grid">
+
+<div class="about-image">
+
+<img src="IMG_3752 (1).jpg">
+
+<div class="experience-box">
+<h3>2+</h3>
+<p>Years Experience</p>
+</div>
+
+</div>
+
+<div class="about-content">
+
+<span class="badge">ABOUT ME</span>
+
+<h2>About <span>Sf Sakib</span></h2>
+
+<p>
+I develop websites that convert more visitors into customers | WordPress Developer & WooCommerce Expert | Front End Web Developer
+</p>
+
+<div class="about-skills">
+
+<div class="skill">🔵 WordPress Developer</div>
+<div class="skill">🧩 Elementor Expert</div>
+<div class="skill">⚙ E-Commerce Specialist</div>
+<div class="skill">🔥WooCommerce Expert</div>
+<div class="skill">⚡Dropshipping Expert</div>
+<div class="skill">🛡 Front End Web Developer</div>
+
+</div>
+
+<div class="about-buttons">
+
+<a href="#" class="btn">Read More</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="portfolio" class="section container">
+
+<div class="portfolio-title">
+
+<span class="badge">MY WORK</span>
+
+<h2>Recent <span>Portfolio</span></h2>
+
+<p>A glimpse of what I've built for clients around the world.</p>
+
+</div>
+
+
+<div class="portfolio-grid">
+
+<!-- PROJECT 1 -->
+
+<div class="portfolio-card">
+
+<img src="project1.jpeg">
+
+<div class="portfolio-content">
+
+<h5>WEB PROJECT</h5>
+
+<h3>Airport Help Service BD Meet & Greet</h3>
+
+<p>Service at Dhaka Airport</p>
+
+<div class="tags">
+<span>wordpress</span>
+<span>elementor</span>
+<span>seo</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 2 -->
+
+<div class="portfolio-card">
+
+<img src="Zen-Mart.jpeg">
+
+<div class="portfolio-content">
+
+<h5>WEB PROJECT</h5>
+
+<h3>First Golden Care</h3>
+
+<p>Senior Living and Care</p>
+
+<div class="tags">
+<span>wordpress</span>
+<span>elementor</span>
+<span>seo</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 3 -->
+
+<div class="portfolio-card">
+
+<img src="WordPress-Ecommerce-Website.jpeg">
+
+<div class="portfolio-content">
+
+<h5>WEB PROJECT</h5>
+
+<h3>Dependable Care AFH</h3>
+
+<p>Compassionate Care</p>
+
+<div class="tags">
+<span>wordpress</span>
+<span>elementor</span>
+<span>seo</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 4 -->
+
+<div class="portfolio-card">
+
+<img src="La-alba.jpeg">
+
+<div class="portfolio-content">
+
+<h5>WEB PROJECT</h5>
+
+<h3>TR Logistics</h3>
+
+<p>Logistics Company Website</p>
+
+<div class="tags">
+<span>wordpress</span>
+<span>elementor</span>
+<span>seo</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="view-btn">
+<a href="#" class="btn">View All Projects</a>
+</div>
+
+</section>
+
+<section id="pricing" class="section container">
+
+<div class="pricing-title">
+<h2>Simple & Transparent <span>Pricing</span></h2>
+<p>Choose the plan that fits your project.</p>
+</div>
+
+<div class="pricing-cards">
+
+<!-- BASIC -->
+
+<div class="price-card">
+
+<div class="icon">
+<i class="fa-solid fa-seedling"></i>
+</div>
+
+<h3>Basic</h3>
+<h2>$80 <span>/ project</span></h2>
+
+<ul>
+
+<li><i class="fa fa-check"></i> 1-3 Page WordPress Website</li>
+<li><i class="fa fa-check"></i> Mobile Responsive Design</li>
+<li><i class="fa fa-check"></i> Contact Form Setup</li>
+<li><i class="fa fa-check"></i> Basic SEO Setup</li>
+<li><i class="fa fa-check"></i> 3 Days Delivery</li>
+<li><i class="fa fa-check"></i> 7 Days Free Support</li>
+
+<li class="disabled"><i class="fa fa-xmark"></i> E-commerce Features</li>
+<li class="disabled"><i class="fa fa-xmark"></i> Custom Plugin Dev</li>
+<li class="disabled"><i class=""></i> </li>
+<li class="disabled"><i class=""></i> </li>
+
+</ul>
+
+
+<a href="#" class="btn-fiverr"><i class="fa fa-cart-shopping"></i> Order Now</a>
+<a href="mailto:office.sfsakib@gmail.com" class="btn-email"><i class="fa fa-envelope"></i> Email Me</a>
+
+</div>
+
+
+<!-- STANDARD -->
+
+<div class="price-card popular">
+
+<div class="popular-badge">Most Popular</div>
+
+<div class="icon">
+<i class="fa-solid fa-rocket"></i>
+</div>
+
+<h3>Standard</h3>
+<h2>$249 <span>/ project</span></h2>
+
+<ul>
+
+<li><i class="fa fa-check"></i> Up to 10 Pages</li>
+<li><i class="fa fa-check"></i> Premium Theme & Design</li>
+<li><i class="fa fa-check"></i> WooCommerce Store</li>
+<li><i class="fa fa-check"></i> Payment Gateway</li>
+<li><i class="fa fa-check"></i> Advanced SEO Setup</li>
+<li><i class="fa fa-check"></i> Speed Optimization</li>
+<li><i class="fa fa-check"></i> 1 Weeks Delivery</li>
+<li><i class="fa fa-check"></i> 30 Days Free Support</li>
+<li class="disabled"><i class=""></i> </li>
+<li class="disabled"><i class=""></i> </li>
+
+</ul>
+
+<a href="#" class="btn-fiverr"><i class="fa fa-cart-shopping"></i> Order Now</a>
+<a href="mailto:office.sfsakib@gmail.com" class="btn-email"><i class="fa fa-envelope"></i> Email Me</a>
+
+</div>
+
+
+<!-- PREMIUM -->
+
+<div class="price-card">
+
+<div class="icon">
+<i class="fa-solid fa-gem"></i>
+</div>
+
+<h3>Premium</h3>
+<h2>$599+ <span>/ project</span></h2>
+
+<ul>
+
+<li><i class="fa fa-check"></i> Unlimited Pages</li>
+<li><i class="fa fa-check"></i> Custom Web Application</li>
+<li><i class="fa fa-check"></i> Custom Plugin Development</li>
+<li><i class="fa fa-check"></i> Admin Dashboard</li>
+<li><i class="fa fa-check"></i> REST API Integration</li>
+<li><i class="fa fa-check"></i> Full SEO Optimization</li>
+<li><i class="fa fa-check"></i> Dedicated Timeline</li>
+<li><i class="fa fa-check"></i> 60 Days Free Support</li>
+<li class="disabled"><i class=""></i> </li>
+<li class="disabled"><i class=""></i> </li>
+
+</ul>
+
+<a href="#" class="btn-fiverr"><i class="fa fa-cart-shopping"></i> Order Now</a>
+<a href="mailto:office.sfsakib@gmail.com" class="btn-email"><i class="fa fa-envelope"></i> Email Me</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact-form" class="hire-section">
+
+<div class="hire-box">
+
+<h2>Send Me a <span>Message</span></h2>
+
+<p>Fill the form — I'll reply with a free quote within 2 hours!</p>
+
+<form id="hireForm">
+
+<div class="form-grid">
+
+<div class="input-box">
+<label>FULL NAME *</label>
+<input type="text" id="name" placeholder="Your Name" required>
+</div>
+
+<div class="input-box">
+<label>EMAIL *</label>
+<input type="email" id="email" placeholder="your@email.com" required>
+</div>
+
+<div class="input-box">
+<label>PHONE / WHATSAPP</label>
+<input type="text" id="phone" placeholder="+880 XXXXXXXXXX">
+</div>
+
+<div class="input-box">
+<label>SERVICE NEEDED</label>
+<select id="service">
+<option>Select Service</option>
+<option>WordPress Website</option>
+<option>E-commerce Store</option>
+<option>Dropshipping Store</option>
+<option>Custom Website</option>
+<option>Website Redesign</option>
+<option>Others</option>
+</select>
+</div>
+
+</div>
+
+<div class="input-box">
+<label>BUDGET RANGE</label>
+<select id="budget">
+<option>Select Budget</option>
+<option>$50 - $100</option>
+<option>$100 - $300</option>
+<option>$300 - $1000</option>
+<option>$1000+</option>
+</select>
+</div>
+
+<div class="input-box">
+<label>MESSAGE *</label>
+<textarea id="message" placeholder="Describe your project..." required></textarea>
+</div>
+
+<button type="submit" class="hire-btn">
+<i class="fa-solid fa-paper-plane"></i> Get Free Quote
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<section class="testimonials">
+
+<div class="section-title">
+<span class="badge">CLIENT FEEDBACK</span>
+<h2>What Clients <span>Say</span></h2>
+<p>Real feedback from real clients.</p>
+</div>
+
+<div class="testimonial-slider">
+
+<button class="arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+
+<div class="testimonial-wrapper">
+
+<div class="testimonial-card">
+<div class="quote">❝</div>
+
+<p>
+"Sf Sakib built my restaurant website exactly how I wanted. 
+Beautiful design, loads fast. Delivered ahead of schedule!"
+</p>
+
+<div class="client">
+
+<img src="https://i.pravatar.cc/60?img=1">
+
+<div>
+<h4>Ahmed Rahman</h4>
+<span>Restaurant Owner</span>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="testimonial-card">
+<div class="quote">❝</div>
+
+<p>
+"Amazing developer. My eCommerce website works perfectly."
+</p>
+
+<div class="client">
+
+<img src="https://i.pravatar.cc/60?img=2">
+
+<div>
+<h4>John Smith</h4>
+<span>Business Owner</span>
+
+<div class="stars">★★★★★</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="testimonial-card">
+<div class="quote">❝</div>
+
+<p>
+"Professional service and great communication."
+</p>
+
+<div class="client">
+
+<img src="https://i.pravatar.cc/60?img=3">
+
+<div>
+<h4>David Lee</h4>
+<span>Startup Founder</span>
+
+<div class="stars">★★★★★</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<button class="arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+
+</div>
+
+<div class="dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+
+</section>
+
+
+<section class="cta-section">
+
+<div class="cta-box">
+
+<span class="cta-badge">LET'S WORK TOGETHER</span>
+
+<h2>
+Ready to Start Your <span>Dream Project?</span>
+</h2>
+
+<p>
+Contact me today for a free consultation. Let's build something amazing!
+</p>
+
+<div class="cta-buttons">
+
+<a href="#contact-form" class="btn-quote">
+<i class="fa-solid fa-paper-plane"></i> Get Free Quote
+</a>
+
+<a href="https://www.fiverr.com/sfsakibb" class="btn-whatsapp">
+<i class="fa fa-shopping-cart"></i> Order on Fiverr
+</a>
+
+<a href="https://wa.me/8801312058283" class="btn-quote">
+<i class="fab fa-whatsapp"></i> WhatsApp Now
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- LEFT -->
+<div class="footer-about">
+
+<h2 class="logo">Sf Sakib</h2>
+
+<p>
+Professional WordPress developer and Web Designer from Bangladesh,
+serving clients globally.
+</p>
+
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+<a href="#"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+<a href="#"><i class="fas fa-envelope"></i></a>
+</div>
+
+</div>
+
+
+<!-- QUICK LINKS -->
+<div class="footer-links">
+
+<h3>QUICK LINKS</h3>
+
+<ul>
+<li><a href="#">Fiverr</a></li>
+<li><a href="#">Upwork</a></li>
+<li><a href="#">Behance</a></li>
+<li><a href="#">Exness</a></li>
+</ul>
+
+</div>
+
+
+<!-- SERVICES -->
+<div class="footer-links">
+
+<h3>SERVICES</h3>
+
+<ul>
+<li><a href="#">WordPress Dev</a></li>
+<li><a href="#">E-commerce Store</a></li>
+<li><a href="#">PHP Web App</a></li>
+<li><a href="#">Custom Website</a></li>
+<li><a href="#">SEO & Speed</a></li>
+<li><a href="#">Bug Fix</a></li>
+</ul>
+
+</div>
+
+
+<!-- CONTACT -->
+<div class="footer-contact">
+
+<h3>CONTACT INFO</h3>
+
+<p>📍 Rajshahi Bangladesh</p>
+<p>🌐 Remote Work Worldwide</p>
+<p>☎ +880 1312 058283</p>
+<p>✉ office.sfsakib@gmail.com</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+<p>© 2026 Sf Sakib — All rights reserved.</p>
+</div>
+
+</footer>
+
+
+<script>
+
+const texts=[
+"Web Designer",
+"WordPress Developer",
+"E-commerce Specialist",
+"Dropshipping Expert"
+];
+
+let i=0,j=0,isDeleting=false;
+
+function typeEffect(){
+
+const element=document.getElementById("changingText");
+const current=texts[i];
+
+if(!isDeleting){
+
+element.textContent=current.substring(0,j+1);
+j++;
+
+if(j===current.length){
+isDeleting=true;
+setTimeout(typeEffect,1500);
+return;
+}
+
+}else{
+
+element.textContent=current.substring(0,j-1);
+j--;
+
+if(j===0){
+isDeleting=false;
+i=(i+1)%texts.length;
+}
+
+}
+
+setTimeout(typeEffect,80);
+
+}
+
+typeEffect();
+
+document.getElementById("hireForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const phone = document.getElementById("phone").value;
+const service = document.getElementById("service").value;
+const budget = document.getElementById("budget").value;
+const message = document.getElementById("message").value;
+
+const text=
+`🔥 New Client Message
+
+👤 Name: ${name}
+📧 Email: ${email}
+📱 Phone: ${phone}
+🛠 Service: ${service}
+💰 Budget: ${budget}
+
+📩 Message:
+${message}`;
+
+const token="8331651839:AAG0cf_S_BpH_cjOOwI0ZN3kEK6Jz_gH47E";
+const chat_id="6150754588";
+
+const url=`https://api.telegram.org/bot${token}/sendMessage`;
+
+fetch(url,{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+chat_id:chat_id,
+text:text
+})
+})
+.then(()=>{
+alert("Message Sent Successfully!");
+document.getElementById("hireForm").reset();
+})
+
+});
+
+const wrapper = document.querySelector(".testimonial-wrapper");
+const cards = document.querySelectorAll(".testimonial-card");
+const dots = document.querySelectorAll(".dot");
+
+let index = 0;
+
+function updateSlider(){
+
+wrapper.style.transform = `translateX(-${index * 650}px)`;
+wrapper.style.transition = "0.5s";
+
+dots.forEach(d=>d.classList.remove("active"));
+dots[index].classList.add("active");
+
+}
+
+document.querySelector(".next").onclick=()=>{
+index++;
+if(index>=cards.length) index=0;
+updateSlider();
+}
+
+document.querySelector(".prev").onclick=()=>{
+index--;
+if(index<0) index=cards.length-1;
+updateSlider();
+}
+
+</script>
+
+
+</body>
+</html>
